@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThoughtDef>
+    <defName>One_Vision_Ascension</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>9999</durationDays>
+    <stackLimit>1</stackLimit>
+    <showBubble>false</showBubble>
+    <stages>
+      <li>
+        <label>万众一心</label>
+        <baseMoodEffect>8</baseMoodEffect>
+        <description>万众一心</description>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- 呆猫动物定义 -->
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>DaiCat</defName>
+    <label>呆猫</label>
+    <description>一只来自远方的可爱呆猫。</description>
+
+    <statBases>
+      <MarketValue>200</MarketValue>
+      <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+      <ComfyTemperatureMax>40</ComfyTemperatureMax>
+      <MoveSpeed>3.5</MoveSpeed>
+    </statBases>
+
+    <race>
+      <!-- 第一版暂时沿用原版动物身体结构 -->
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <fleshType>Normal</fleshType>
+
+      <baseBodySize>0.25</baseBodySize>
+      <baseHealthScale>0.6</baseHealthScale>
+      <baseHungerRate>0.18</baseHungerRate>
+
+      <foodType>CarnivoreAnimal, AnimalProduct</foodType>
+      <thinkTreeMain>Animal</thinkTreeMain>
+
+      <trainability>None</trainability>
+      <wildness>0.2</wildness>
+      <petness>1</petness>
+
+      <nuzzleMtbHours>12</nuzzleMtbHours>
+      <lifeExpectancy>15</lifeExpectancy>
+      <gestationPeriodDays>10</gestationPeriodDays>
+      <nameOnTameChance>1</nameOnTameChance>
+
+      <!-- 成长阶段 -->
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>3</minAge>
+        </li>
+      </lifeStageAges>
+
+      <!-- 野外生成 -->
+      <wildBiomes>
+        <TemperateForest>0.1</TemperateForest>
+        <BorealForest>0.1</BorealForest>
+      </wildBiomes>
+    </race>
+
+  </ThingDef>
+
+  <!-- 呆猫生成定义 -->
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>DaiCat</defName>
+    <label>呆猫</label>
+    <race>DaiCat</race>
+
+    <combatPower>10</combatPower>
+    <ecoSystemWeight>0.5</ecoSystemWeight>
+
+    <wildGroupSize>
+      <min>1</min>
+      <max>2</max>
+    </wildGroupSize>
+
+    <minGenerationAge>0</minGenerationAge>
+    <maxGenerationAge>15</maxGenerationAge>
+
+    <!-- 幼年贴图 -->
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/DaiCat/DaiCat_Young</texPath>
+          <drawSize>0.6</drawSize>
+        </bodyGraphicData>
+      </li>
+
+      <!-- 成年贴图 -->
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/DaiCat/DaiCat_Adult</texPath>
+          <drawSize>0.9</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+</Defs>
